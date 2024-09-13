@@ -1,8 +1,19 @@
 # TEF668X Headless USB Tuner
 
-USB radio tuner based on STM32F072 MCU and TEF6687 RF receiver with digital audio and three antenna inputs (2x FM SMA & 1x AM U.FL).
+USB radio tuner based on STM32F072 MCU and TEF6687 RF receiver with three antenna inputs and digital audio.
 
-Copyright (C) 2024  FMDX.org
+Copyright (C) 2024 FMDX.org
+
+You may redistribute and modify this source under the terms of the CERN-OHL-W v2 (see LICENSE file).
+
+# Credits 
+
+- Konrad Kosmatka - HW & FW architecture and development
+- Sjef Verhoeven - HW development
+- Marek Kraus - HW & FW prototyping
+- Marek Farkaš - testing and integration with FM-DX Webserver
+- Przemysław Korpas - HW consultation, reviews
+- Sebastian Białkowski - HW consultation, reviews
 
 # Firmware
 
