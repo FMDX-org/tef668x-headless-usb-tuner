@@ -17,7 +17,13 @@ You may redistribute and modify this source under the terms of the CERN-OHL-W v2
 
 # Firmware
 
-See [FM-DX-Tuner](https://github.com/kkonradpl/FM-DX-Tuner).
+The firmware is available in a separate repository: [FM-DX-Tuner](https://github.com/kkonradpl/FM-DX-Tuner).
+
+Firmware dependencies:
+- Board: STM32 MCU Based Boards ([STM32duino](https://github.com/stm32duino)) - download using board manager
+- Library: [TinyUSB](https://github.com/hathach/tinyusb) - install manually to the Arduino libraries
+
+During first firmware flashing, short BOOT to 3.3V, plug the USB cable and flash using Arduino IDE (DFU method). Once the firmware is running, it is not necessary to manually short BOOT pin. See [tef-bootloader](https://github.com/kkonradpl/tef-bootloader).
 
 # Audio output
 
@@ -25,7 +31,8 @@ The baseline version of the tuner supports only digital audio over USB. For a re
 
 # Important remarks
 
-- TEF6687 chip is recommended for the best performance (FMSI, FULL SCAN RDS).
+- TEF6687/V205 (F8705) chip is recommended for the best performance (FMSI, FULL SCAN RDS).
 - RF circuits should contain NP0 (C0G) capacitors.
 - Only V205 version of TEF668X supports the 55.46667 MHz crystal.
 - For a crystal different than 55.46667 MHz, GPIO1 must be pulled to the ground (instead of pull-up).
+- All capacitors and resistors are 0603, except R30 and R31 which are 0402.
